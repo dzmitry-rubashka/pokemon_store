@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 const homePage = () => {
   return (
-      <h1>Registration & Authorization</h1>
+    <h1>Registration & Authorization</h1>
   );
 };
 
