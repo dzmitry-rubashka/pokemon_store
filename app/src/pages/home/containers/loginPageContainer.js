@@ -14,7 +14,7 @@ const LoginPageContainer = () => {
   const {isAuth} = useSelector(state => state.auth);
 
 
-  const [formData, handleChange, handleReset] = useForm({
+  const [formData, handleChange] = useForm({
     email: '',
     password: '',
   })
