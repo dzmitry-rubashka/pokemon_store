@@ -9,7 +9,7 @@ import {ROUTES} from "../../../routes/routeNames";
 const LoginPageContainer = () => {
   const dispatch = useDispatch();
 
-  const history = useHistory()
+  const history = useHistory();
 
   const {isAuth} = useSelector(state => state.auth);
 
@@ -22,7 +22,7 @@ const LoginPageContainer = () => {
   const handleSubmit = useCallback((event) =>{
     event.preventDefault();
     dispatch(LOG_IN_REQUEST(formData));
-  },[formData])
+  },[formData, dispatch])
 
   useLayoutEffect(() => {
     if (isAuth) {

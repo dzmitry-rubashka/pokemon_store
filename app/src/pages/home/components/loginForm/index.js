@@ -8,6 +8,7 @@ const LoginForm = ({formValue, onChange, onSubmit}) => {
   return (
     <form onSubmit={onSubmit}>
       <h1 className={styles}>Home Page (Login Page)</h1>
+
       <div>
         <span>Email</span>
         <input
@@ -32,7 +33,6 @@ const LoginForm = ({formValue, onChange, onSubmit}) => {
       <Link to={ROUTES.SING_UP}>
         <button>Sign Up</button>
       </Link>
-
     </form>
   );
 };

@@ -12,7 +12,7 @@ import MainLayout from "./commonComponents/layout/mainLayout";
 import {configureStore} from "./store/configureStore";
 
 const store = configureStore(devToolsEnhancer(
-  // options like actionSanitizer, stateSanitizer
+  //
 ));
 
 const persistor = persistStore(store);

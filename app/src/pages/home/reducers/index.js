@@ -15,6 +15,7 @@ const authReducer = handleActions({
     ...state,
     isLoading: true,
   }),
+
   [actions.LOG_IN_SUCCESS]: (state, {payload}) => {
     const {accessToken, ...userInfo} = payload.response;
 
