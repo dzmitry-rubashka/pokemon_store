@@ -11,7 +11,7 @@ const LoginForm = ({formValue, onChange, onSubmit}) => {
 
       <div>
         <span>Email</span>
-        <input
+        <input required
           type={"email"}
           value={formValue.email}
           name='email'
@@ -20,7 +20,7 @@ const LoginForm = ({formValue, onChange, onSubmit}) => {
       </div>
       <div>
         <span>Password</span>
-        <input
+        <input required
           type={"password"}
           value={formValue.password}
           name='password'

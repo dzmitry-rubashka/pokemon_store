@@ -7,7 +7,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit}) => {
 
       <div>
         <span>Email</span>
-        <input
+        <input required
           type={"email"}
           value={formValue.email}
           name='email'
@@ -17,7 +17,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit}) => {
 
       <div>
         <span>First Name</span>
-        <input
+        <input required
           type={"text"}
           value={formValue.firstName}
           name='firstName'
@@ -27,7 +27,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit}) => {
 
       <div>
         <span>Last Name</span>
-        <input
+        <input required
           type={"text"}
           value={formValue.lastName}
           name='lastName'
@@ -37,7 +37,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit}) => {
 
       <div>
         <span>Gender</span>
-        <input
+        <input required
           type={"text"}
           value={formValue.gender}
           name='gender'
@@ -47,7 +47,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit}) => {
 
       <div>
         <span>Password</span>
-        <input
+        <input required
           type={"password"}
           value={formValue.password}
           name='password'
@@ -57,7 +57,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit}) => {
 
       <div>
         <span>Phone</span>
-        <input
+        <input required
           type={"number"}
           value={formValue.phone}
           name='phone'
