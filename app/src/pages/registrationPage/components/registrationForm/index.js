@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 
 const RegistrationForm = ({formValue, onChange, onSubmit}) => {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <h1 className={styles}>Registration Page</h1>
 
       <div>

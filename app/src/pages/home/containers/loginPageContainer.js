@@ -26,7 +26,7 @@ const LoginPageContainer = () => {
 
   useLayoutEffect(() => {
     if (isAuth) {
-      history.push(ROUTES.POKEMONS_PAGE)
+      history.push(ROUTES.POKEMONS)
     }
   },[isAuth])
 
