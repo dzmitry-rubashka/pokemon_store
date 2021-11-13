@@ -8,7 +8,7 @@ export const NAV_TYPE_NAMES = {
 export const NAV_CONFIG = {
   [NAV_TYPE_NAMES.PUBLIC]: [
     {
-      label: 'Home',
+      label: 'Home', //Home Page = Login Page. I just use word "Home"
       path: ROUTES.HOME,
     },
     {
@@ -16,6 +16,7 @@ export const NAV_CONFIG = {
       path: ROUTES.SING_UP,
     },
   ],
+
   [NAV_TYPE_NAMES.PRIVATE]: [
     {
       label: 'Home',

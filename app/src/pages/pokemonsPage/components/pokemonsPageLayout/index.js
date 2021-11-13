@@ -13,11 +13,10 @@ const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, han
     <div className={styles.cardArea}>
       <h1>Pokemons</h1>
       {isLoading ? (<CircularProgress/> ): (
-        <List items={list} renderItems={({id, name, url}) => (
+        <List items={list} renderItems={({id, name}) => (
           <PokemonCard
             key={id}
             name={name}
-            city={url}
             handleClick={() => handleGoToDetails(name)}
           />
         )}
@@ -35,7 +34,7 @@ const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, han
 PokemonPageLayout.propTypes = {
   list: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    url: PropTypes.string,   //   .isRequired was deleted here
+    url: PropTypes.string,   // .isRequired was deleted here
   }))
 }
 
