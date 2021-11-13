@@ -1,6 +1,8 @@
 import styles from './styles.module.scss';
+import {ROUTES} from "../../../../routes/routeNames";
+import {Link} from "react-router-dom";
 
-const RegistrationForm = ({formValue, onChange, onSubmit}) => {
+const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
   return (
     <form onSubmit={onSubmit}>
       <h1 className={styles}>Registration Page</h1>
@@ -66,7 +68,18 @@ const RegistrationForm = ({formValue, onChange, onSubmit}) => {
       </div>
 
       <button role="submit">Register</button>
+
+      {isRegistered ?
+        <div>
+        <p>Your account has been successfully created</p>
+        <Link to={ROUTES.HOME}>
+          <button>Go To Homepage</button>
+        </Link>
+      </div>:
+        null}
+
     </form>
+
   );
 };
 
