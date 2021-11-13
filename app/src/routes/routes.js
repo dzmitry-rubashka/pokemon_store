@@ -14,9 +14,9 @@ const Routes = () => {
       <Route exact path={ROUTES.HOME} component={LoginPageContainer}/>
       <Route path={ROUTES.SING_UP} component={RegistrationPageContainer}/>
       <PrivateRoutes exact path={ROUTES.POKEMONS} component={PokemonsPageContainer}/>
-      <Route path={ROUTES.POKEMONS_DETAILS} component={PokemonDetailsPageContainer}/>
-      <Route path={ROUTES.CART}/>
-      <Route path={ROUTES.PERSONAL_DATA}/>
+      <PrivateRoutes exact path={ROUTES.POKEMONS_DETAILS} component={PokemonDetailsPageContainer}/>
+      <PrivateRoutes path={ROUTES.CART}/>
+      <PrivateRoutes path={ROUTES.PERSONAL_DATA}/>
       <Redirect path='*' to={ROUTES.HOME}/>
     </Switch>
   );

@@ -32,7 +32,7 @@ export const NAV_CONFIG = {
     },
     {
       label: 'Pokemon Details',
-      path: ROUTES.POKEMON_DETAILS,
+      path: ROUTES.POKEMONS_DETAILS,
     },
     {
       label: 'Cart',
