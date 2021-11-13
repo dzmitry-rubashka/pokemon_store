@@ -12,10 +12,14 @@ const Routes = () => {
       <Route exact path={ROUTES.HOME} component={LoginPageContainer}/>
       <Route path={ROUTES.SING_UP} component={RegistrationPageContainer}/>
       <Route path={ROUTES.POKEMONS} component={PokemonsPageContainer}/>
+      <Route path={ROUTES.POKEMON_DETAILS}/>
+      <Route path={ROUTES.CART}/>
+      <Route path={ROUTES.PERSONAL_DATA}/>
       <Redirect path='*' to={ROUTES.HOME}/>
     </Switch>
   );
 };
 
 export default Routes;
+
 

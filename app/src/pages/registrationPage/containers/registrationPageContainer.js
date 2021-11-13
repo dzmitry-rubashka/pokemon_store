@@ -1,7 +1,7 @@
 import RegistrationForm from "../../registrationPage/components/registrationForm";
 import {useForm} from "../../../hooks";
 import {useDispatch, useSelector} from 'react-redux'
-import {useCallback, useLayoutEffect} from "react";
+import {useCallback} from "react";
 import {SIGN_UP_REQUEST} from "../actions";
 
 const RegistrationPageContainer = () => {
