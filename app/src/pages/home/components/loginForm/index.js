@@ -4,11 +4,11 @@ import {Link} from "react-router-dom";
 
 import styles from './styles.module.scss';
 
-const LoginForm = ({formValue, onChange, onSubmit}) => {
+
+const LoginForm = ({formValue, onChange, onSubmit, error}) => {
   return (
     <form onSubmit={onSubmit}>
       <h1 className={styles}>Home Page (Login Page)</h1>
-
       <div>
         <span>Email</span>
         <input required
@@ -27,6 +27,9 @@ const LoginForm = ({formValue, onChange, onSubmit}) => {
           onChange={onChange}
         />
       </div>
+
+      {error && <div> {error}</div>}
+
       <button role="submit">Login</button>
 
       <div>Don't have an account?</div>
