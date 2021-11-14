@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-const PokemonCard = ({handleClick}) => (
+const PokemonCard = ({handleClick, name, image}) => (
   <Card sx={{maxWidth: 345}}>
     <CardActionArea>
       <CardMedia
@@ -18,10 +18,7 @@ const PokemonCard = ({handleClick}) => (
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Pokemon
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Pokemon Test
+          {name}
         </Typography>
       </CardContent>
     </CardActionArea>

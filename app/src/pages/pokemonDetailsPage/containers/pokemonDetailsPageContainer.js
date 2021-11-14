@@ -10,16 +10,19 @@ const PokemonDetailsPageContainer = () => {
   const dispatch = useDispatch();
 
   const {info} = useSelector(state => state.pokemonDetails)
-
   const {name} = useParams();
 
   useEffect(()=> {
     dispatch(GET_POKEMON_DETAILS_REQUEST(name))
-  },[name])
+  },[dispatch, name])
+
   return <PokemonDetailsPageLayout
     name={info.name}
     price={info.price}
-  />;
+    id={info.id}
+    image={info.image}
+  />
 };
 
 export default PokemonDetailsPageContainer;
+

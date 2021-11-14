@@ -6,6 +6,7 @@ import LoginPageContainer from "../pages/home/containers/loginPageContainer";
 import RegistrationPageContainer from "../pages/registrationPage/containers/registrationPageContainer";
 import PokemonsPageContainer from "../pages/pokemonsPage/containers/pokemonsPageContainer";
 import PokemonDetailsPageContainer from "../pages/pokemonDetailsPage/containers/pokemonDetailsPageContainer";
+
 import PrivateRoutes from "./privateRoutes";
 
 const Routes = () => {
