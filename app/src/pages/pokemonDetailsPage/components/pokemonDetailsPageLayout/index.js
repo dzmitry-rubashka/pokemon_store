@@ -6,6 +6,9 @@ const PokemonDetailsPageLayout = ({name, price, id, image}) => (
     <h2>My price is - {price}</h2>
     <h2>My ID is - {id}</h2>
     <h2><img src={image}/></h2>
+    <button>
+      Add to cart (doesnt work)
+    </button>
   </div>
 )
 

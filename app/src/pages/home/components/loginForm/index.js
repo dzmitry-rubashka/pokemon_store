@@ -1,41 +1,83 @@
+import * as React from 'react';
+
 import {ROUTES} from "../../../../routes/routeNames";
+
+import Box from '@mui/material/Box';
+import Input from '@mui/material/Input';
+import Button from '@mui/material/Button';
 
 import {Link} from "react-router-dom";
 
 import styles from './styles.module.scss';
 
+const ariaLabel = { 'aria-label': 'description' };
 
 const LoginForm = ({formValue, onChange, onSubmit, error}) => {
   return (
     <form onSubmit={onSubmit}>
-      <h1 className={styles}>Home Page (Login Page)</h1>
-      <div>
-        <span>Email</span>
-        <input required
-          type={"email"}
-          value={formValue.email}
-          name='email'
-          onChange={onChange}
-        />
+      <h1 className={styles.title}>Login Page</h1>
+      <div className={styles.login}>
+        <div>
+          <span className={styles.input}>Email</span>
+          <Box
+            component="form"
+            sx={{
+              '& > :not(style)': { m: 1 },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <Input
+              required
+              type={"email"}
+              value={formValue.email}
+              name='email'
+              onChange={onChange}
+              defaultValue="" inputProps={ariaLabel}
+            />
+          </Box>
+        </div>
+
+        <div>
+          <span className={styles.input}>Password</span>
+          <Box
+            component="form"
+            sx={{
+              '& > :not(style)': { m: 1 },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <Input
+              required
+              type={"password"}
+              value={formValue.password}
+              name='password'
+              onChange={onChange}
+              defaultValue="" inputProps={ariaLabel}
+            />
+          </Box>
+        </div>
+
+        {error && <div className={styles.error}> {error}</div>}
+
+        {/*<button role="button">Login</button>             ??????????????????????????*/}
+
+        <Button variant="outlined" size="small" type="submit">
+          Login
+        </Button>
+
+        <div className={styles.text}>Don't have an account?</div>
+
+        {/*<Link to={ROUTES.SING_UP}>         ?????????????????????????*/}
+        {/*  <button>Sign Up</button>*/}
+        {/*</Link>*/}
+
+        <Link to={ROUTES.SING_UP} className={styles.link}>
+          <Button variant="outlined" size="small">Sign Up</Button>
+        </Link>
+
       </div>
-      <div>
-        <span>Password</span>
-        <input required
-          type={"password"}
-          value={formValue.password}
-          name='password'
-          onChange={onChange}
-        />
-      </div>
-
-      {error && <div> {error}</div>}
-
-      {<button role="submit">Login</button>               /*<button >Login</button> ??????????*/}
-
-      <div>Don't have an account?</div>
-      <Link to={ROUTES.SING_UP}>
-        <button>Sign Up</button>
-      </Link>
     </form>
   );
 };

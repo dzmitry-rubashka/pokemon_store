@@ -19,6 +19,7 @@ const apiCallsMapping = (action) => {
     [pokemonsPageActions.GET_POKEMONS_REQUEST]: pokemonsPageAPI.getPokemons,
 
     [pokemonsDetailsPageActions.GET_POKEMON_DETAILS_REQUEST]: pokemonsDetailsAPI.getPokemonDetails,
+
   };
   return mapping[action.type]
 }

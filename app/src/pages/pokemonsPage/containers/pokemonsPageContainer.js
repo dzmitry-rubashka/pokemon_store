@@ -27,6 +27,7 @@ const PokemonPageContainer = () => {
   },[dispatch, currentPage, name]);
 
   return <PokemonPageLayout
+    price={info.price}
     name={info.name}
     image={info.image}
     list={list}

@@ -6,8 +6,9 @@ import LoginPageContainer from "../pages/home/containers/loginPageContainer";
 import RegistrationPageContainer from "../pages/registrationPage/containers/registrationPageContainer";
 import PokemonsPageContainer from "../pages/pokemonsPage/containers/pokemonsPageContainer";
 import PokemonDetailsPageContainer from "../pages/pokemonDetailsPage/containers/pokemonDetailsPageContainer";
+import PersonalDataPageContainer from "../pages/personalDataPage/containers/personalDataPageContainer";
 
-import PrivateRoutes from "./privateRoutes";
+import PrivateRoutes from "./privateRoute";
 
 const Routes = () => {
   return (
@@ -17,7 +18,7 @@ const Routes = () => {
       <PrivateRoutes exact path={ROUTES.POKEMONS} component={PokemonsPageContainer}/>
       <PrivateRoutes exact path={ROUTES.POKEMONS_DETAILS} component={PokemonDetailsPageContainer}/>
       <PrivateRoutes path={ROUTES.CART}/>
-      <PrivateRoutes path={ROUTES.PERSONAL_DATA}/>
+      <PrivateRoutes path={ROUTES.PERSONAL_DATA} component={PersonalDataPageContainer}/>
       <Redirect path='*' to={ROUTES.HOME}/>
     </Switch>
   );

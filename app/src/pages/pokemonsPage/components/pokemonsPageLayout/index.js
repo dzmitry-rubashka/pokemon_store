@@ -13,8 +13,9 @@ const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, han
     <div className={styles.cardArea}>
       <h1>Pokemons</h1>
       {isLoading ? (<CircularProgress/> ): (
-        <List items={list} renderItems={({id, name, image}) => (
+        <List items={list} renderItems={({id, name, image, price}) => (
           <PokemonCard
+            price={price}
             name={name}
             image={image}
             key={id}

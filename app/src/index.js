@@ -12,7 +12,7 @@ import MainLayout from "./commonComponents/layout/mainLayout";
 import {configureStore} from "./store/configureStore";
 
 const store = configureStore(devToolsEnhancer(
-  //
+
 ));
 
 const persistor = persistStore(store);
@@ -22,7 +22,7 @@ ReactDOM.render(
     <PersistGate loading={null} persistor={persistor}>
       <Provider store={store}>
         <MainLayout>
-          <Routes />
+          <Routes/>
         </MainLayout>
       </Provider>
     </PersistGate>

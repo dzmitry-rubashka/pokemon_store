@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
   return (
     <form onSubmit={onSubmit}>
-      <h1 className={styles}>Registration Page</h1>
+      <h1 className={styles.title}>Registration Page</h1>
 
       <div>
         <span>Email</span>
@@ -73,11 +73,12 @@ const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
         <div>
         <p>Your account has been successfully created</p>
         <Link to={ROUTES.HOME}>
-          <button>Go To Homepage</button>
+          <button>Back To Login Page</button>
         </Link>
       </div>:
-        null}
-
+        <Link to={ROUTES.HOME}>
+          <button>Back To Login Page</button>
+        </Link>}
     </form>
 
   );
