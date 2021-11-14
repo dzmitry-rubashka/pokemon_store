@@ -13,12 +13,11 @@ const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, han
     <div className={styles.cardArea}>
       <h1>Pokemons</h1>
       {isLoading ? (<CircularProgress/> ): (
-        <List items={list} renderItems={({id, name}) => (
+        <List items={list} renderItems={({id, name, image}) => (
           <PokemonCard
             name={name}
             image={image}
             key={id}
-            name={name}
             handleClick={() => handleGoToDetails(name)}
           />
         )}

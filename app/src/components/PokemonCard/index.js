@@ -12,9 +12,9 @@ const PokemonCard = ({handleClick, name, image}) => (
     <CardActionArea>
       <CardMedia
         component="img"
-        height="140"
-        image={pokeImage}
-        alt="green iguana"
+        height="200"
+        image={image}
+        alt="pokemon"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

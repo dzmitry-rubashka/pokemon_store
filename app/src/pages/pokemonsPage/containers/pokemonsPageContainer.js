@@ -24,7 +24,8 @@ const PokemonPageContainer = () => {
 
   useEffect(() => {
     dispatch(GET_POKEMONS_REQUEST(currentPage))
-  },[currentPage]);
+  },[dispatch, currentPage, name]);
+
   return <PokemonPageLayout
     name={info.name}
     image={info.image}
