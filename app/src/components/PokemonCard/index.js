@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-const PokemonCard = ({handleClick, name, image, price}) => (
+const PokemonCard = ({handleClick, name, image, price, handleAddPokemon}) => (
   <Card sx={{maxWidth: 345}}>
     <CardActionArea>
       <CardMedia
@@ -24,12 +24,8 @@ const PokemonCard = ({handleClick, name, image, price}) => (
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button size="small" color="primary" onClick={handleClick}>
-        Full Info
-      </Button>
-      <Button size="small" color="primary">
-        Add to cart (doesnt work)
-      </Button>
+      <Button size="small" color="primary" onClick={handleClick}>Full Info</Button>
+      <Button size="small" color="primary" onClick={handleAddPokemon}>Add to cart (doesnt work)</Button>
     </CardActions>
   </Card>
 )

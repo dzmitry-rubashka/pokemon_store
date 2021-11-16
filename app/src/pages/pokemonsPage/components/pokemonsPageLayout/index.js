@@ -8,7 +8,7 @@ import List from "../../../../commonComponents/list";
 
 import {CircularProgress} from "@mui/material"
 
-const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, handlePageChange, name, image}) => {
+const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, handlePageChange, name, image, handleAddPokemon}) => {
   return <div>
     <div className={styles.cardArea}>
       <h1>Pokemons</h1>
@@ -20,6 +20,7 @@ const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, han
             image={image}
             key={id}
             handleClick={() => handleGoToDetails(name)}
+            handleAddPokemon={handleAddPokemon}
           />
         )}
         />

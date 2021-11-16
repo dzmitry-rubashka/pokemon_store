@@ -10,34 +10,34 @@ const defaultState = {
   error: null,
 }
 
-const authReducer = handleActions({
-  [actions.LOG_IN_REQUEST]: (state) => ({
-    ...state,
-    isLoading: true,
-  }),
+const authReducer = handleActions(
+  {
+    [actions.LOG_IN_REQUEST]: (state) => ({
+      ...state,
+      isLoading: true,
+    }),
 
-  [actions.LOG_IN_SUCCESS]: (state, {payload}) => {
-    const {accessToken, ...userInfo} = payload.response;
+    [actions.LOG_IN_SUCCESS]: (state, {payload}) => {
+      const {accessToken, ...userInfo} = payload.response;
 
-    localStorage.setItem(LOCAL_STORAGE_KEYS.TOKEN, accessToken);
+      localStorage.setItem(LOCAL_STORAGE_KEYS.TOKEN, accessToken);
 
-    return {
+      return {
+        ...state,
+        isLoading: false,
+        info: userInfo,
+        isAuth: true,
+        error: null,
+      }
+    },
+
+    [actions.LOG_IN_FAIL]: (state, {payload}) => ({
       ...state,
       isLoading: false,
-      info: userInfo,
-      isAuth: true,
-      error: null,
-    }
+      error: payload.response,
+    }),
   },
-
-  [actions.LOG_IN_FAIL]: (state, {payload}) => ({
-    ...state,
-    isLoading: false,
-    error: payload.response,
-  })
-},
   defaultState
 );
 
 export default authReducer
-

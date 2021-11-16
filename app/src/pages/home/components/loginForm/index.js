@@ -10,11 +10,11 @@ import {Link} from "react-router-dom";
 
 import styles from './styles.module.scss';
 
-const ariaLabel = { 'aria-label': 'description' };
+const ariaLabel = {'aria-label': 'description'};
 
-const LoginForm = ({formValue, onChange, onSubmit, error}) => {
+const LoginForm = ({formValue, onChange, onSubmit, error, isFormValid}) => {
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={styles.wrapper}>
       <h1 className={styles.title}>Login Page</h1>
       <div className={styles.login}>
         <div>
@@ -63,9 +63,7 @@ const LoginForm = ({formValue, onChange, onSubmit, error}) => {
 
         {/*<button role="button">Login</button>             ??????????????????????????*/}
 
-        <Button variant="outlined" size="small" type="submit">
-          Login
-        </Button>
+        <Button variant="outlined" size="small" type="submit" disabled={!isFormValid}>Login</Button>
 
         <div className={styles.text}>Don't have an account?</div>
 

@@ -5,7 +5,7 @@ import {Provider} from 'react-redux'
 import {PersistGate} from 'redux-persist/integration/react';
 import {persistStore} from 'redux-persist';
 
-import { devToolsEnhancer } from 'redux-devtools-extension/logOnlyInProduction';
+import {devToolsEnhancer} from 'redux-devtools-extension/logOnlyInProduction';
 
 import Routes from "./routes/routes";
 import MainLayout from "./commonComponents/layout/mainLayout";

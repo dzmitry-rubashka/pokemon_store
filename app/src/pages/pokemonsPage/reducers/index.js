@@ -27,6 +27,7 @@ const pokemonsPageReducer = handleActions(
       error: payload.response,
       isLoading: false,
     }),
+
     [actions.CHANGE_PAGE]: (state, {payload}) => ({
       ...state,
       currentPage: payload,
