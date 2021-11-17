@@ -7,6 +7,7 @@ import createActionWithPostfix from '../utils/actionPostfixCreator';
 const { REQUEST_POSTFIX, SUCCESS_POSTFIX, FAIL_POSTFIX } = ACTION_POSTFIXES;
 
 function* sendRequest(action) {
+  console.log(action.payload)
   try {
     const callRequest = apiCallsMapping(action);
     const response = yield call(callRequest, action.payload);
@@ -14,7 +15,7 @@ function* sendRequest(action) {
     const newActionToDispatch = createActionWithPostfix(
       action,
       {
-        response: response.data,
+        response: response?.data,
         actionPayload: action.payload
       },
       SUCCESS_POSTFIX
@@ -23,6 +24,7 @@ function* sendRequest(action) {
       newActionToDispatch
     );
   } catch (error) {
+    console.log(error)
     yield put(
       createActionWithPostfix(
         action,

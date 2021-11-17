@@ -1,6 +1,8 @@
 import {handleActions} from 'redux-actions';
 import * as actions from '../actions';
 
+import * as cartActions from '../../cartPage/actions';
+
 const defaultState = {
   isLoading: false,
   error: null,
@@ -25,6 +27,16 @@ const pokemonDetailsPageReducer = handleActions(
       error: payload,
       isLoading: false,
     }),
+    [cartActions.ADD_POKEMON_REQUEST]: (state) => ({
+      ...state,
+      isLoading: true,
+    }),
+
+    [cartActions.ADD_POKEMON_SUCCESS]: (state) => ({
+      ...state,
+      isLoading: false
+    })
+
   },
   defaultState
 )

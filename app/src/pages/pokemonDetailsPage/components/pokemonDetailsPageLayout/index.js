@@ -14,18 +14,3 @@ const PokemonDetailsPageLayout = ({name, price, id, image, handleAddPokemon}) =>
 )
 
 export default PokemonDetailsPageLayout
-
-
-// {isLoading ? (<CircularProgress/> ): (
-//   <List items={list} renderItems={({id, name, image, price}) => (
-//     <PokemonCard
-//       price={price}
-//       name={name}
-//       image={image}
-//       key={id}
-//       handleClick={() => handleGoToDetails(name)}
-//       handleAddPokemon={handleAddPokemon}
-//     />
-//   )}
-//   />
-// )}

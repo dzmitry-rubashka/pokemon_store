@@ -20,13 +20,15 @@ const cartPageReducer = handleActions(
 
     [actions.GET_CART_SUCCESS]: (state, {payload}) => {
 
+      console.log(payload.response)
+
       return {
         ...state,
         isLoading: false,
         totalPrice: payload.response.totalPrice,
         quantity: payload.response.quantity,
         // customerId: payload.response.customerId,
-        itemList: payload.response.itemList,
+        itemsList: payload.response.itemsList,
       }
     },
 
@@ -34,11 +36,6 @@ const cartPageReducer = handleActions(
       ...state,
       isLoading: false,
       error: payload.response,
-    }),
-
-    [actions.ADD_POKEMON_REQUEST]: (state) => ({
-      ...state,
-      isLoading: true,
     }),
 
     [actions.ADD_POKEMON_SUCCESS]: (state, {payload}) => {
@@ -96,7 +93,7 @@ const cartPageReducer = handleActions(
 
       const {cartState, removedItem} = payload.response; /// ???????
       const stateCopy = [...state.itemsList];
-      const itemIndexToRemove = stateCopy.findIndex(item => item.id === removedItem); //or customerId ?
+      const itemIndexToRemove = stateCopy.findIndex((item) => item.id === removedItem); //or customerId ?
       stateCopy.splice(itemIndexToRemove, 1)
 
       return {
