@@ -6,7 +6,7 @@ const defaultState = {
   totalPrice: 0,
   quantity: 0,
   itemsList: [],
-  // customerId: null, //???????????
+  customerId: null, //???????????
   isLoading: false,
   error: null,
 }
@@ -20,14 +20,12 @@ const cartPageReducer = handleActions(
 
     [actions.GET_CART_SUCCESS]: (state, {payload}) => {
 
-      console.log(payload.response)
-
       return {
         ...state,
         isLoading: false,
         totalPrice: payload.response.totalPrice,
         quantity: payload.response.quantity,
-        // customerId: payload.response.customerId,
+        customerId: payload.response.customerId,
         itemsList: payload.response.itemsList,
       }
     },
@@ -45,7 +43,7 @@ const cartPageReducer = handleActions(
         isLoading: false,
         totalPrice: payload.response.totalPrice,
         quantity: payload.response.quantity,
-        // customerId: payload.response.customerId,
+        customerId: payload.response.customerId,
         itemList: payload.response.itemList,
       }
     },
@@ -73,7 +71,7 @@ const cartPageReducer = handleActions(
         isLoading: false,
         totalPrice: cartState.totalPrice,
         quantity: cartState.quantity,
-        // customerId: payload.response.customerId,
+        customerId: payload.response.customerId,
         itemList: stateCopy,
       }
     },
@@ -101,7 +99,7 @@ const cartPageReducer = handleActions(
         isLoading: false,
         totalPrice: cartState.totalPrice,
         quantity: cartState.quantity,
-        // customerId: payload.response.customerId,
+        customerId: payload.response.customerId,
         itemList: stateCopy,
       }
     },

@@ -6,6 +6,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 import PokemonCard from "../../../../components/PokemonCard";
 
@@ -30,27 +32,21 @@ const CartPageLayout = (
   );
 
   return (
-    <div>
+    <div className={styles.cardArea}>
       {itemsList.map((item) => (
-        <Card sx={{ maxWidth: 350 }} className={styles.cardArea}>
-          <CardContent>
-            <Typography sx={{ fontSize: 24 }} color="text.secondary" gutterBottom>
+        <Card sx={{ maxWidth: 300 }} className={styles.cardArea}>
+          <CardContent className={styles.card}>
+            <Typography sx={{ fontSize: 40 }} color="text.secondary" gutterBottom >
               {item.name}
             </Typography>
-            <Typography variant="h5" component="div">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
+            <Typography>
+              {<img src={item.image}/>}
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Learn More</Button>
+            <Button onClick={() => handleDecrement(item)} size="small"> <RemoveCircleOutlineIcon fontSize={"large"} /></Button>
+            <div>{item.quantity}</div>
+            <Button onClick={() => handleIncrement(item)} size="small"> <AddCircleOutlineIcon fontSize={"large"}/></Button>
           </CardActions>
         </Card>
       ))}

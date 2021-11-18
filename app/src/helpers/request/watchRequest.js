@@ -24,6 +24,7 @@ function* sendRequest(action) {
       newActionToDispatch
     );
   } catch (error) {
+
     console.log(error)
     yield put(
       createActionWithPostfix(

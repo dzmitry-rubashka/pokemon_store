@@ -27,6 +27,10 @@ const pokemonDetailsPageReducer = handleActions(
       error: payload,
       isLoading: false,
     }),
+
+
+
+
     [cartActions.ADD_POKEMON_REQUEST]: (state) => ({
       ...state,
       isLoading: true,

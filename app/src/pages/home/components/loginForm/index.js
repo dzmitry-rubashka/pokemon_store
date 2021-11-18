@@ -61,15 +61,9 @@ const LoginForm = ({formValue, onChange, onSubmit, error, isFormValid}) => {
 
         {error && <div className={styles.error}> {error}</div>}
 
-        {/*<button role="button">Login</button>             ??????????????????????????*/}
-
         <Button variant="outlined" size="small" type="submit" disabled={!isFormValid}>Login</Button>
 
         <div className={styles.text}>Don't have an account?</div>
-
-        {/*<Link to={ROUTES.SING_UP}>         ?????????????????????????*/}
-        {/*  <button>Sign Up</button>*/}
-        {/*</Link>*/}
 
         <Link to={ROUTES.SING_UP} className={styles.link}>
           <Button variant="outlined" size="small">Sign Up</Button>

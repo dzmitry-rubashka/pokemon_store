@@ -8,7 +8,7 @@ const PokemonDetailsPageLayout = ({name, price, id, image, handleAddPokemon}) =>
     <h2>My ID is - {id}</h2>
     <h2><img src={image}/></h2>
     <button onClick={handleAddPokemon}>
-      Add to cart (doesnt work)
+      Add To Cart
     </button>
   </div>
 )

@@ -1,6 +1,42 @@
 .title {
-  font-family: '8BIT WONDER', sans-serif;
+  font-family: 'Joystix', sans-serif;
   font-size: 30px;
   color: #9f8139;
   text-align: center;
 }
+
+.link {
+  text-decoration: none;
+}
+
+.text {
+  font-family: 'Joystix', sans-serif;
+  font-size: 14px;
+  color: #9f8139;
+  margin: 15px 0px;
+
+}
+
+.registration {
+  text-align: center;
+}
+
+.input {
+  font-family: 'Joystix', sans-serif;
+  font-size: 16px;
+  color: #9f8139;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.successCreate {
+  text-align: center;
+  color: #295736;
+  font-family: 'Joystix', sans-serif;
+  font-size: 16px;
+}
+
