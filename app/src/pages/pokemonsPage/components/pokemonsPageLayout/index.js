@@ -30,7 +30,7 @@ const PokemonPageLayout = ({ list, isLoading, handleGoToDetails, currentPage, ha
     <CustomPagination
       currentPage={currentPage}
       onPageChange={handlePageChange}
-      pageCount={20}
+      pageCount={25}
     />
   </div>;
 };

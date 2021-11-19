@@ -42,8 +42,6 @@ const PokemonPageContainer = () => {
     dispatch(CHANGE_PAGE(page));
   }, [dispatch])
 
-
-
   useEffect(() => {
     dispatch(GET_POKEMONS_REQUEST(currentPage, name))
 
