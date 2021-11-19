@@ -37,6 +37,7 @@ const CartPageContainer = () => {
 
   const handleDeletePokemon = useCallback((pokemon) => {
     dispatch(DELETE_POKEMON_REQUEST(pokemon));
+    dispatch(GET_CART_REQUEST());
   }, [dispatch]);
 
   useEffect(() => {

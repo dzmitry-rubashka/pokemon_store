@@ -49,7 +49,7 @@ const cartPageReducer = handleActions(
         totalPrice: payload.response.totalPrice,
         quantity: payload.response.quantity,
         customerId: payload.response.customerId,
-        itemList: payload.response.itemList,
+        itemsList: payload.response.itemsList,
       }
     },
 
@@ -77,7 +77,7 @@ const cartPageReducer = handleActions(
         totalPrice: cartState.totalPrice,
         quantity: cartState.quantity,
         customerId: payload.response.customerId,
-        itemList: stateCopy,
+        itemsList: stateCopy,
       }
     },
 
@@ -105,7 +105,7 @@ const cartPageReducer = handleActions(
         totalPrice: cartState.totalPrice,
         quantity: cartState.quantity,
         customerId: payload.response.customerId,
-        itemList: stateCopy,
+        itemsList: stateCopy,
       }
     },
 
