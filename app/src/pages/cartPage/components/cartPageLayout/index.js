@@ -19,7 +19,7 @@ const CartPageLayout = (
     handleIncrement,
     handleDecrement,
     handleAddPokemon,
-    handleDeletePokemon
+    handleDeletePokemon,
   }
 ) => {
   const bull = (
@@ -34,7 +34,7 @@ const CartPageLayout = (
   return (
     <div className={styles.cardArea}>
       {itemsList.map((item) => (
-        <Card sx={{ maxWidth: 300 }} className={styles.cardArea}>
+        <Card sx={{ width: 250 }} className={styles.cardArea}>
           <CardContent className={styles.card}>
             <Typography sx={{ fontSize: 40 }} color="text.secondary" gutterBottom >
               {item.name}
@@ -47,6 +47,7 @@ const CartPageLayout = (
             <Button onClick={() => handleDecrement(item)} size="small"> <RemoveCircleOutlineIcon fontSize={"large"} /></Button>
             <div>{item.quantity}</div>
             <Button onClick={() => handleIncrement(item)} size="small"> <AddCircleOutlineIcon fontSize={"large"}/></Button>
+            <button onClick={() => handleDeletePokemon(item.id)}>Delete</button>
           </CardActions>
         </Card>
       ))}

@@ -36,6 +36,11 @@ const cartPageReducer = handleActions(
       error: payload.response,
     }),
 
+    [actions.ADD_POKEMON_REQUEST]: (state) => ({
+      ...state,
+      isLoading: true,
+    }),
+
     [actions.ADD_POKEMON_SUCCESS]: (state, {payload}) => {
 
       return {

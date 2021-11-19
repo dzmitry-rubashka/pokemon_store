@@ -2,6 +2,8 @@ import {useSelector} from "react-redux";
 import {useMemo} from "react";
 import {Link} from 'react-router-dom';
 
+import styles from './styles.module.scss';
+
 import {NAV_TYPE_NAMES, NAV_CONFIG} from "./config";
 
 import {useLogout} from "../../hooks";
@@ -17,7 +19,7 @@ const NavBar = () => {
     return NAV_CONFIG[navType];
   }, [isAuth])
 
-  return <div>
+  return <div className={styles.background}>
     {navItems.map(({label, path}) =>
       <Link key={path} to={path}>
         <button>{label}</button>

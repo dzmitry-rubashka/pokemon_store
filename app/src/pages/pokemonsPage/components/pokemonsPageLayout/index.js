@@ -6,14 +6,14 @@ import CustomPagination from "../../../../commonComponents/customPagination";
 import PokemonCard from "../../../../components/PokemonCard";
 import List from "../../../../commonComponents/list";
 
-import {CircularProgress} from "@mui/material"
+import { CircularProgress } from "@mui/material"
 
-const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, handlePageChange, name, image, handleAddPokemon, id}) => {
-  return <div>
+const PokemonPageLayout = ({ list, isLoading, handleGoToDetails, currentPage, handlePageChange, name, image, handleAddPokemon, id, addPokemonToState }) => {
+  return <div className={styles.background}>
     <div className={styles.cardArea}>
       <h1>Pokemons</h1>
-      {isLoading ? (<CircularProgress/> ): (
-        <List items={list} renderItems={({id, name, image, price}) => (
+      {isLoading ? (<CircularProgress />) : (
+        <List items={list} renderItems={({ id, name, image, price }) => (
           <PokemonCard
             price={price}
             name={name}
@@ -21,15 +21,16 @@ const PokemonPageLayout = ({list, isLoading, handleGoToDetails, currentPage, han
             id={id}
             handleClick={() => handleGoToDetails(name)}
             handleAddPokemon={handleAddPokemon}
+            addPokemonToState={addPokemonToState}
           />
         )}
         />
       )}
-    </div>}
+    </div>
     <CustomPagination
       currentPage={currentPage}
       onPageChange={handlePageChange}
-      pageCount={10}
+      pageCount={20}
     />
   </div>;
 };
@@ -42,4 +43,3 @@ PokemonPageLayout.propTypes = {
 }
 
 export default PokemonPageLayout;
-

@@ -35,10 +35,6 @@ const pokemonsPageReducer = handleActions(
     }),
 
 
-
-
-
-
     [cartActions.ADD_POKEMON_REQUEST]: (state) => ({
       ...state,
       isLoading: true,

@@ -1,12 +1,12 @@
 import PokemonPageLayout from "../components/pokemonsPageLayout";
 import {useDispatch, useSelector} from 'react-redux'
-import {useCallback, useEffect} from "react";
-import {CHANGE_PAGE, GET_POKEMONS_REQUEST} from '../actions'
+import {useCallback, useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
-
 import {useParams} from 'react-router-dom';
 
 import {ADD_POKEMON_REQUEST} from "../../cartPage/actions";
+import {GET_POKEMON_DETAILS_REQUEST} from '../../pokemonDetailsPage/actions';
+import {CHANGE_PAGE, GET_POKEMONS_REQUEST} from '../actions'
 
 const PokemonPageContainer = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,6 @@ const PokemonPageContainer = () => {
 
   const handleAddPokemon = useCallback(() => {
     const newPokemon = {
-      //error is here
       id: info.id,
       name: info.name,
       image: info.image,
@@ -24,23 +23,43 @@ const PokemonPageContainer = () => {
       quantity: 1,
     }
     dispatch(ADD_POKEMON_REQUEST(newPokemon));
-  }, [dispatch, info]);
+  }, [dispatch, info, name]);
+
+  const addPokemonToState = useCallback((name) => {
+    dispatch(GET_POKEMON_DETAILS_REQUEST(name));
+    setIsUploadPokemonToState(name);
+  },[dispatch]);
+
+  const [isUploadedNamePokemonToState, setIsUploadPokemonToState] = useState('');
 
   const {list, isLoading, error, currentPage} = useSelector(state => state.pokemonsPage)
 
   const handleGoToDetails = useCallback((pokemonName) => {
     history.push(`/pokemons/${pokemonName}`);
-  },[]);
+  }, []);
 
   const handlePageChange = useCallback((page) => {
     dispatch(CHANGE_PAGE(page));
-  },[dispatch])
+  }, [dispatch])
 
 
 
   useEffect(() => {
     dispatch(GET_POKEMONS_REQUEST(currentPage, name))
-  },[dispatch, currentPage, name]);
+
+    if (isUploadedNamePokemonToState === info.name) {
+      const newPokemon = {
+        //error is here
+        id: info.id,
+        name: info.name,
+        image: info.image,
+        price: info.price,
+        quantity: 1,
+      }
+      dispatch(ADD_POKEMON_REQUEST(newPokemon));
+    }
+
+  }, [dispatch, currentPage, name, isUploadedNamePokemonToState, info]);
 
   return <PokemonPageLayout
     price={info.price}
@@ -54,6 +73,8 @@ const PokemonPageContainer = () => {
     handlePageChange={handlePageChange}
     currentPage={currentPage}
     handleAddPokemon={handleAddPokemon}
+
+    addPokemonToState={addPokemonToState}
   />;
 };
 
