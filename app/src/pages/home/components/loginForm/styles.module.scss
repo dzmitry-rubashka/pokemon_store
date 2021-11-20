@@ -1,7 +1,9 @@
-body {
+.wrapper {
   background-image: url('../../../../static/images/login-page.png');
   background-repeat: no-repeat;
   background-position: center top;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .title {

@@ -10,7 +10,7 @@ const ariaLabel = {'aria-label': 'description'};
 
 const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
   return (
-    <div className={styles.background}>
+    <div>
       <form onSubmit={onSubmit}>
         <h1 className={styles.title}>Registration Page</h1>
         <div className={styles.registration}>
@@ -142,20 +142,19 @@ const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
           </div>
         </div>
 
-        {/*<Button role="submit" variant="outlined" size="small">Register</Button>*/}
-        {/*<button role="submit">Register</button>*/}
-
         {isRegistered ?
           <div className={styles.successCreate}>
             <p>Your account has been successfully created</p>
             <Link to={ROUTES.HOME} className={styles.link}>
-              <Button variant="outlined" size="small">Back To Login Page</Button>
+              <Button className={styles.button} >Back To Login Page</Button>
             </Link>
           </div>:
           <div className={styles.registration}>
-            <button role="submit">Register</button>
+            <div>
+              <Button type="submit" style={{backgroundColor: '#53258d', color: '#FFFFFF', marginBottom: '15px'}}>Register</Button>
+            </div>
             <Link to={ROUTES.HOME} className={styles.link}>
-              <Button variant="outlined" size="small">Back To Login Page</Button>
+              <Button style={{backgroundColor: '#53258d', color: '#FFFFFF'}}>Back To Login Page</Button>
             </Link>
           </div>
 
@@ -167,7 +166,4 @@ const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
 
 export default RegistrationForm;
 
-// <Link to={ROUTES.SING_UP} className={styles.link}>
-//   <Button variant="outlined" size="small">Back To Login Page</Button>
-// </Link>
 

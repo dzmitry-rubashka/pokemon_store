@@ -25,13 +25,6 @@ const PokemonPageContainer = () => {
     dispatch(ADD_POKEMON_REQUEST(newPokemon));
   }, [dispatch, info, name]);
 
-  const addPokemonToState = useCallback((name) => {
-    dispatch(GET_POKEMON_DETAILS_REQUEST(name));
-    setIsUploadPokemonToState(name);
-  },[dispatch]);
-
-  const [isUploadedNamePokemonToState, setIsUploadPokemonToState] = useState('');
-
   const {list, isLoading, error, currentPage} = useSelector(state => state.pokemonsPage)
 
   const handleGoToDetails = useCallback((pokemonName) => {
@@ -42,12 +35,18 @@ const PokemonPageContainer = () => {
     dispatch(CHANGE_PAGE(page));
   }, [dispatch])
 
+  const [isUploadedNamePokemonToState, setIsUploadPokemonToState] = useState('');
+
+  const addPokemonToState = useCallback((name) => {
+    dispatch(GET_POKEMON_DETAILS_REQUEST(name));
+    setIsUploadPokemonToState(name);
+  },[dispatch]);
+
   useEffect(() => {
     dispatch(GET_POKEMONS_REQUEST(currentPage, name))
 
     if (isUploadedNamePokemonToState === info.name) {
       const newPokemon = {
-        //error is here
         id: info.id,
         name: info.name,
         image: info.image,

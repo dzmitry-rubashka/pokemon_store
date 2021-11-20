@@ -6,7 +6,7 @@ const defaultState = {
   totalPrice: 0,
   quantity: 0,
   itemsList: [],
-  customerId: null, //???????????
+  // customerId: null, //???????????
   isLoading: false,
   error: null,
 }
@@ -48,7 +48,7 @@ const cartPageReducer = handleActions(
         isLoading: false,
         totalPrice: payload.response.totalPrice,
         quantity: payload.response.quantity,
-        customerId: payload.response.customerId,
+        // customerId: payload.response.customerId,
         itemsList: payload.response.itemsList,
       }
     },
@@ -76,7 +76,7 @@ const cartPageReducer = handleActions(
         isLoading: false,
         totalPrice: cartState.totalPrice,
         quantity: cartState.quantity,
-        customerId: payload.response.customerId,
+        // customerId: payload.response.customerId,
         itemsList: stateCopy,
       }
     },
@@ -104,7 +104,7 @@ const cartPageReducer = handleActions(
         isLoading: false,
         totalPrice: cartState.totalPrice,
         quantity: cartState.quantity,
-        customerId: payload.response.customerId,
+        // customerId: payload.response.customerId,
         itemsList: stateCopy,
       }
     },
@@ -112,7 +112,7 @@ const cartPageReducer = handleActions(
     [actions.DELETE_POKEMON_FAIL]: (state, {payload}) => ({
       ...state,
       isLoading: false,
-      error: payload.response,
+      error: payload.response.response,
     }),
   },
   defaultState
