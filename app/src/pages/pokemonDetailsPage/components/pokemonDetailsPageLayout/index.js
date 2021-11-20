@@ -1,15 +1,21 @@
 import styles from "./styles.module.scss"
 import {CircularProgress} from "@mui/material"
+import Button from "@mui/material/Button";
+import * as React from "react";
 
-const PokemonDetailsPageLayout = ({name, price, id, image, handleAddPokemon}) => (
+const PokemonDetailsPageLayout = ({name, price, image, handleAddPokemon, abilities}) => (
   <div>
-    <h2>My name is - {name}</h2>
-    <h2>My price is - {price}</h2>
-    <h2>My ID is - {id}</h2>
-    <h2><img src={image}/></h2>
-    <button onClick={handleAddPokemon}>
-      Add To Cart
-    </button>
+    <h2 className={styles.name}>{name}</h2>
+    <h2 className={styles.price}>Price - {price}</h2>
+    <h2 className={styles.img}><img src={image}/></h2>
+    <h2 className={styles.description}>{abilities?.map((ability) => (
+        <h3>{ability.title}</h3>,
+        <h4>{ability.description}</h4>
+    ))}
+    </h2>
+    <div className={styles.button}>
+      <Button style={{backgroundColor: '#02524c', color: '#FFFFFF'}} onClick={handleAddPokemon}>Add To Cart</Button>
+    </div>
   </div>
 )
 

@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
-import PokemonCard from "../../../../components/PokemonCard";
 
 const CartPageLayout = (
   {
@@ -22,37 +21,40 @@ const CartPageLayout = (
     handleDeletePokemon,
   }
 ) => {
-  const bull = (
-    <Box
-      component="span"
-      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-      •
-    </Box>
-  );
-
   return (
-    <div className={styles.cardArea}>
-      {itemsList.map((item) => (
-        <Card sx={{ width: 250 }} className={styles.cardArea}>
-          <CardContent className={styles.card}>
-            <Typography sx={{ fontSize: 40 }} color="text.secondary" gutterBottom >
-              {item.name}
-            </Typography>
-            <Typography>
-              {<img src={item.image}/>}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button onClick={() => handleDecrement(item)} size="small"> <RemoveCircleOutlineIcon fontSize={"large"} /></Button>
-            <div>{item.quantity}</div>
-            <Button onClick={() => handleIncrement(item)} size="small"> <AddCircleOutlineIcon fontSize={"large"}/></Button>
-            <button onClick={() => handleDeletePokemon(item.id)}>Delete</button>
-          </CardActions>
-        </Card>
-      ))}
+    <div className={styles.wrapper}>
+      <div className={styles.cardArea}>
+        {itemsList.map((item) => (
+          <Card sx={{ width: 250 }} className={styles.cardArea}>
+            <CardContent className={styles.card}>
+              <div className={styles.name}>
+                {item.name}
+              </div>
+              <div className={styles.price}>
+                Price - {item.price}
+              </div>
+              <Typography>
+                {<img src={item.image}/>}
+              </Typography>
+            </CardContent>
+            <CardActions className={styles.card}>
+              <div>
+                <Button onClick={() => handleDecrement(item)} size="small"> <RemoveCircleOutlineIcon fontSize={"large"} /></Button>
+              </div>
+              <div>{item.quantity}</div>
+              <div>
+                <Button onClick={() => handleIncrement(item)} size="small"> <AddCircleOutlineIcon fontSize={"large"}/></Button>
+              </div>
+            </CardActions>
+            <CardContent className={styles.card}>
+              <Button variant="outlined" color="error" onClick={() => handleDeletePokemon(item.id)}>
+                Delete
+              </Button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
-
   );
 };
 

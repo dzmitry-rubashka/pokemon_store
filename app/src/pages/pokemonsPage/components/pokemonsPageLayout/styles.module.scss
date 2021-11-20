@@ -1,7 +1,54 @@
-.cardArea {
+.title {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-family: 'Joystix', sans-serif;
+  font-size: 40px;
+  color: #6b2a5e;
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 22px;
+  text-align: center;
+  color: #943e34;
+  font-family: 'Joystix', sans-serif;
+}
+
+.price {
+  margin-top: 5px;
+  font-size: 15px;
+  text-align: center;
+  color: #503d4f;
+  font-family: 'Joystix', sans-serif;
+}
+
+.wrapper {
   display: flex;
-  justify-content: space-between;
-  height: 85vh;
-  overflow-y: auto;
+  justify-content: center;
+  margin: 10px 10px 10px 10px;
   flex-wrap: wrap;
 }
+
+.actions {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.button {
+  padding: 10px
+}
+
+.cardArea {
+  margin: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+

@@ -1,17 +1,28 @@
 .cardArea {
   display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px;
   overflow-y: auto;
   flex-wrap: wrap;
-  max-width: 90vw;
+  max-width: 95vw;
 }
 
 .card {
   margin: 0 auto;
 }
 
-.buttons {
-
+.name {
+  font-size: 22px;
+  text-align: center;
+  color: #943e34;
+  font-family: 'Joystix', sans-serif;
 }
+
+.price {
+  margin-top: 5px;
+  font-size: 15px;
+  text-align: center;
+  color: #503d4f;
+  font-family: 'Joystix', sans-serif;
+}
+
+

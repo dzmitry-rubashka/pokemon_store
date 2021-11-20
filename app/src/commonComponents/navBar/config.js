@@ -27,7 +27,7 @@ export const NAV_CONFIG = {
     //   path: ROUTES.SING_UP,
     // },
     {
-      label: 'Pokemons',
+      label: 'Store',
       path: ROUTES.POKEMONS,
     },
     // {
@@ -39,7 +39,7 @@ export const NAV_CONFIG = {
       path: ROUTES.CART,
     },
     {
-      label: 'Personal Data',
+      label: 'Personal Information',
       path: ROUTES.PERSONAL_DATA,
     },
   ],

@@ -146,7 +146,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
           <div className={styles.successCreate}>
             <p>Your account has been successfully created</p>
             <Link to={ROUTES.HOME} className={styles.link}>
-              <Button className={styles.button} >Back To Login Page</Button>
+              <Button style={{backgroundColor: '#53258d', color: '#FFFFFF'}}>Back To Login Page</Button>
             </Link>
           </div>:
           <div className={styles.registration}>

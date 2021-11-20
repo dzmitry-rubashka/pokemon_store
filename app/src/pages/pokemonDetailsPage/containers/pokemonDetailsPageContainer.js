@@ -34,6 +34,7 @@ const PokemonDetailsPageContainer = () => {
     id={info.id}
     image={info.image}
     handleAddPokemon={handleAddPokemon}
+    abilities={info.abilities}
   />
 };
 

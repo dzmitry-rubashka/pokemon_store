@@ -10,9 +10,13 @@ import {useSelector} from "react-redux";
 const Header = () => {
   const {isAuth} = useSelector(state => state.auth);
   return (
-    <div className={styles.background}>
+    <div>
       <NavBar/>
-      {isAuth && <Badge badgeContent={16} color={'primary'}><ShoppingCart/></Badge>}
+      {isAuth &&
+      <div className={styles.cart}>
+        <Badge badgeContent={16} color={'primary'} className={styles.badge}><ShoppingCart/></Badge>
+      </div>
+      }
     </div>
   );
 };
