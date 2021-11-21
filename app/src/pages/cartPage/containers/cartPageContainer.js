@@ -3,11 +3,13 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import CartPageLayout from "../components/cartPageLayout";
 import {ADD_POKEMON_REQUEST, CHANGE_QUANTITY_REQUEST, DELETE_POKEMON_REQUEST, GET_CART_REQUEST} from "../actions";
+import {ADD_ORDER_REQUEST} from "../../personalDataPage/actions";
 
 const CartPageContainer = () => {
   const dispatch = useDispatch();
 
   const {isLoading, totalPrice, itemsList} = useSelector((state) => state.cart);
+  const {info} = useSelector((state) => state.auth)
 
   const handleIncrement = useCallback((pokemon) => {
     const newValue = {
@@ -40,6 +42,21 @@ const CartPageContainer = () => {
     dispatch(GET_CART_REQUEST());
   }, [dispatch]);
 
+
+
+  const handleAddNewOrder = useCallback(() => {
+      const addNewOrder = {
+        itemsList: itemsList,
+        totalPrice: totalPrice,
+        customerId: info._id
+      }
+      dispatch(ADD_ORDER_REQUEST(addNewOrder));
+    },
+    [dispatch, itemsList, totalPrice, info]
+  );
+
+
+
   useEffect(() => {
     dispatch(GET_CART_REQUEST())
   }, [dispatch])
@@ -52,7 +69,9 @@ const CartPageContainer = () => {
     handleDecrement={handleDecrement}
     handleAddPokemon={handleAddPokemon}
     handleDeletePokemon={handleDeletePokemon}
+    handleAddNewOrder={handleAddNewOrder}
   />
 };
 
-export default CartPageContainer;
+export default CartPageContainer
+

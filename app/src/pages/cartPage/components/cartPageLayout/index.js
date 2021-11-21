@@ -1,6 +1,5 @@
 import styles from './styles.module.scss';
 
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import * as React from "react";
 
 
 const CartPageLayout = (
@@ -19,10 +19,13 @@ const CartPageLayout = (
     handleDecrement,
     handleAddPokemon,
     handleDeletePokemon,
+    handleAddNewOrder
   }
 ) => {
   return (
-    <div className={styles.wrapper}>
+    <>
+    <div className={styles.totalPrice}>Total Price - {totalPrice}</div>
+    <div>
       <div className={styles.cardArea} >
         {itemsList.map((item) => (
           //key?
@@ -55,7 +58,16 @@ const CartPageLayout = (
           </Card>
         ))}
       </div>
+      <div className={styles.order}>
+        <Button style={{backgroundColor: '#354D9BD3', color: '#FFFFFF'}}
+                type='submit'
+                onClick={() => handleAddNewOrder()}
+        >
+          Submit Order
+        </Button>
+      </div>
     </div>
+    </>
   );
 };
 

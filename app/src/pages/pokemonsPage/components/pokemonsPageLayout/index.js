@@ -1,20 +1,16 @@
+import * as React from "react";
+
 import styles from './styles.module.scss';
 
 import PropTypes from "prop-types"
 import CustomPagination from "../../../../commonComponents/customPagination";
 
-import PokemonCard from "../../../../components/PokemonCard";
-import List from "../../../../commonComponents/list";
-
 import { CircularProgress } from "@mui/material"
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
-import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import * as React from "react";
+
 
 const PokemonPageLayout = ({handleGoToDetails,
                              id,
