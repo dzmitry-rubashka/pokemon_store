@@ -25,7 +25,6 @@ function* sendRequest(action) {
     );
   } catch (error) {
 
-    console.log(error)
     yield put(
       createActionWithPostfix(
         action,
