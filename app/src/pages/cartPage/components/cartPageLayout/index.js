@@ -47,7 +47,7 @@ const CartPageLayout = (
               </div>
             </CardActions>
             <CardContent className={styles.card}>
-              <Button variant="outlined" color="error" onClick={() => handleDeletePokemon(item.id)}>
+              <Button variant="outlined" color="error" onClick={() => handleDeletePokemon(item.id)} >
                 Delete
               </Button>
             </CardContent>
