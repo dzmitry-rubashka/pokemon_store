@@ -38,7 +38,7 @@ const PokemonPageLayout = ({handleGoToDetails,
                   <div className={styles.price}>
                     Price - {item.price}
                   </div>
-                  <Typography>
+                  <Typography className={styles.image}>
                     {<img src={item.image}/>}
                   </Typography>
                 </CardContent>
@@ -49,7 +49,7 @@ const PokemonPageLayout = ({handleGoToDetails,
                   <div className={styles.button}>
                     <Button size="small" color="primary" onClick={() => {
                       addPokemonToState(item.name)
-                    }} style={{backgroundColor: '#70917BFF', color: '#FFFFFF'}}>Add to cart</Button>
+                    }} style={{backgroundColor: '#afb26d', color: '#FFFFFF'}}>Add to cart</Button>
                   </div>
                 </div>
               </Card>

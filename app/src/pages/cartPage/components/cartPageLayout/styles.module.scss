@@ -1,9 +1,16 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .cardArea {
   display: flex;
   margin: 10px;
   overflow-y: auto;
   flex-wrap: wrap;
   max-width: 95vw;
+  justify-content: center;
 }
 
 .card {

@@ -1,5 +1,10 @@
 import styles from "./styles.module.scss"
 
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import * as React from "react";
+
 const PersonalDataPageLayout = ({firstName, lastName, gender, email, phone, isLoading, ordersList}) => {
   return (
     <>
@@ -10,34 +15,37 @@ const PersonalDataPageLayout = ({firstName, lastName, gender, email, phone, isLo
         <h2>Email - {email}</h2>
         <h2>Gender - {gender}</h2>
         <h2>Phone - {phone}</h2>
+        <h3 className={styles.title}>- Order History -</h3>
       </div>
+      <div className={styles.cardArea} >
+        {ordersList?.map((order) => (
+          <div key={order._id}>
+            <div className={styles.order}>
+              <h3 className={styles.totalPrice}>Total Price - {order.totalPrice}</h3>
+              <div className={styles.prevOrder}>
+                {order.itemsList?.map((item) => (
+                  <Card sx={{ width: 200 }} key={item.id} className={styles.card}>
+                    <CardContent>
+                      <div className={styles.name}>
+                        {item.name}
+                      </div>
+                      <Typography className={styles.image}>
+                        {<img src={item.image}/>}
+                      </Typography>
+                      <div className={styles.quantity}>
+                        Quantity - {item.quantity}
+                      </div>
+                    </CardContent>
 
-      {ordersList?.map((order) => (
-        <div key={order._id}>
-          <div >
-            <div >
-              <div>
-                <div>
-                  <div>Pokemon name</div>
-                  <div></div>Image</div>
-                <div>Price</div>
-                <div>Quantity</div>
-                <h3>TOTAL PRICE: {order.totalPrice}</h3>
+                  </Card>
+
+                ))}
               </div>
             </div>
-            <div>
-              {order.itemsList?.map((item) => (
-                <div key={item.id}>
-                  <div>{item.name}</div>
-                  <div><img src={item.image}/></div>
-                  <div>{item.price}</div>
-                  <div>{item.quantity}</div>
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
         ))}
+      </div>
+
     </>
   )
 }

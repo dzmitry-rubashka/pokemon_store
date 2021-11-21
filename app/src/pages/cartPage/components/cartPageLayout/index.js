@@ -25,11 +25,10 @@ const CartPageLayout = (
   return (
     <>
     <div className={styles.totalPrice}>Total Price - {totalPrice}</div>
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.cardArea} >
         {itemsList.map((item) => (
-          //key?
-          <Card sx={{ width: 250 }} className={styles.cardArea}>
+          <Card sx={{ width: 250 }} className={styles.cardArea} key={item.id}>
             <CardContent className={styles.card}>
               <div className={styles.name}>
                 {item.name}
@@ -58,6 +57,7 @@ const CartPageLayout = (
           </Card>
         ))}
       </div>
+    </div>
       <div className={styles.order}>
         <Button style={{backgroundColor: '#354D9BD3', color: '#FFFFFF'}}
                 type='submit'
@@ -66,7 +66,6 @@ const CartPageLayout = (
           Submit Order
         </Button>
       </div>
-    </div>
     </>
   );
 };

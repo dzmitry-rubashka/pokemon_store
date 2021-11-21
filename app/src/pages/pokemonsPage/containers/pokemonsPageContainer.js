@@ -1,6 +1,6 @@
 import PokemonPageLayout from "../components/pokemonsPageLayout";
 import {useDispatch, useSelector} from 'react-redux'
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useState, useLayoutEffect} from "react";
 import {useHistory} from "react-router-dom";
 import {useParams} from 'react-router-dom';
 
@@ -42,7 +42,7 @@ const PokemonPageContainer = () => {
     dispatch(CHANGE_PAGE(page));
   }, [dispatch])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     dispatch(GET_POKEMONS_REQUEST(currentPage, name))
   }, [dispatch, currentPage, name])
 
