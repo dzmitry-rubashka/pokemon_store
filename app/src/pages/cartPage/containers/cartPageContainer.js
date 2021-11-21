@@ -18,7 +18,7 @@ const CartPageContainer = () => {
   }, [dispatch]);
 
   const handleDecrement = useCallback((pokemon) => {
-    if (pokemon.quantity >= 1) {
+    if (pokemon.quantity > 1) {
       const newValue = {
         id: pokemon.id,
         quantity: pokemon.quantity - 1,

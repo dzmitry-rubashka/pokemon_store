@@ -23,8 +23,9 @@ const CartPageLayout = (
 ) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.cardArea}>
+      <div className={styles.cardArea} >
         {itemsList.map((item) => (
+          //key?
           <Card sx={{ width: 250 }} className={styles.cardArea}>
             <CardContent className={styles.card}>
               <div className={styles.name}>

@@ -44,7 +44,9 @@ const PokemonPageContainer = () => {
 
   useEffect(() => {
     dispatch(GET_POKEMONS_REQUEST(currentPage, name))
+  }, [dispatch, currentPage, name])
 
+  useEffect(() => {
     if (isUploadedNamePokemonToState === info.name) {
       const newPokemon = {
         //is error was here?
@@ -57,7 +59,7 @@ const PokemonPageContainer = () => {
       dispatch(ADD_POKEMON_REQUEST(newPokemon));
     }
 
-  }, [dispatch, currentPage, name, isUploadedNamePokemonToState, info]);
+  }, [dispatch,isUploadedNamePokemonToState, info]);
 
   return <PokemonPageLayout
     price={info.price}

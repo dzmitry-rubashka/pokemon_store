@@ -1,6 +1,6 @@
 import PersonalDataPageLayout from "../components/personalDataPageLayout";
 
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector} from "react-redux";
 
 const PersonalDataPageContainer = () => {
   const {info} = useSelector((state) => state.auth)

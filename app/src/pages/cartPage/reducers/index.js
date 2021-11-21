@@ -66,10 +66,10 @@ const cartPageReducer = handleActions(
 
     [actions.CHANGE_QUANTITY_SUCCESS]: (state, {payload}) => {
 
-      const {cartState, itemWithNewQuantity} = payload.response; /// ???????
+      const {cartState, updatedItem} = payload.response; /// ???????
       const stateCopy = [...state.itemsList];
-      const itemIndexToChange = stateCopy.findIndex((item) => item.id === itemWithNewQuantity.id); //or customerId ?
-      stateCopy.splice(itemIndexToChange, 1, itemWithNewQuantity)
+      const itemIndexToChange = stateCopy.findIndex((item) => item.id === updatedItem.id); //or customerId ?
+      stateCopy.splice(itemIndexToChange, 1, updatedItem)
 
       return {
         ...state,
@@ -94,9 +94,9 @@ const cartPageReducer = handleActions(
 
     [actions.DELETE_POKEMON_SUCCESS]: (state, {payload}) => {
 
-      const {cartState, removedItem} = payload.response; /// ???????
+      const {cartState, removedItemId} = payload.response; /// ???????
       const stateCopy = [...state.itemsList];
-      const itemIndexToRemove = stateCopy.findIndex((item) => item.id === removedItem); //or customerId ?
+      const itemIndexToRemove = stateCopy.findIndex((item) => item.id === removedItemId); //or customerId ?
       stateCopy.splice(itemIndexToRemove, 1)
 
       return {
