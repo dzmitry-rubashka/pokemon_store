@@ -44,6 +44,7 @@ const pokemonsPageReducer = handleActions(
       ...state,
       isLoading: false
     })
+
   },
   defaultState
 )

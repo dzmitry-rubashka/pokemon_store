@@ -1,6 +1,7 @@
 import {handleActions} from 'redux-actions';
 
 import * as actions from '../actions'
+import moment from "moment";
 
 const defaultState = {
   totalPrice: 0,
@@ -38,6 +39,10 @@ const personalDataPageReducer = handleActions(
     }),
 
     [actions.GET_ORDER_SUCCESS]: (state, {payload}) => {
+      const data = payload.response.map(order => ({
+        ...order,
+        createdAt: moment(order.createdAt).format('DD.MM.YYYY'),
+      }))
       return {
         ...state,
         isLoading: false,

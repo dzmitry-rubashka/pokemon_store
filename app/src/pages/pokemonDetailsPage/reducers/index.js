@@ -28,22 +28,22 @@ const pokemonDetailsPageReducer = handleActions(
       isLoading: false,
     }),
 
-      [cartActions.ADD_POKEMON_REQUEST]: (state) => ({
-  ...state,
-  isLoading: true,
-}),
+    [cartActions.ADD_POKEMON_REQUEST]: (state) => ({
+      ...state,
+      isLoading: true,
+    }),
 
-  [cartActions.ADD_POKEMON_SUCCESS]: (state, {payload}) => {
+    [cartActions.ADD_POKEMON_SUCCESS]: (state, {payload}) => {
 
-  return {
-    ...state,
-    isLoading: false,
-    totalPrice: payload.response.totalPrice,
-    quantity: payload.response.quantity,
-    customerId: payload.response.customerId,
-    itemsList: payload.response.itemsList,
-  }
-},
+    return {
+      ...state,
+      isLoading: false,
+      totalPrice: payload.response.totalPrice,
+      quantity: payload.response.quantity,
+      customerId: payload.response.customerId,
+      itemsList: payload.response.itemsList,
+    }
+  },
 
   },
   defaultState

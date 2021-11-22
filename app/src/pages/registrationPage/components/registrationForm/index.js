@@ -8,7 +8,7 @@ import * as React from "react";
 
 const ariaLabel = {'aria-label': 'description'};
 
-const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
+const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered, error, isFormValid}) => {
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -142,6 +142,8 @@ const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
           </div>
         </div>
 
+        {error && <div className={styles.error}> {error}</div>}
+
         {isRegistered ?
           <div className={styles.successCreate}>
             <p>Your account has been successfully created</p>
@@ -151,7 +153,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered}) => {
           </div>:
           <div className={styles.registration}>
             <div>
-              <Button type="submit" style={{backgroundColor: '#53258d', color: '#FFFFFF', marginBottom: '15px'}}>Register</Button>
+              <Button disabled={!isFormValid} type="submit" style={{backgroundColor: '#53258d', color: '#FFFFFF', marginBottom: '15px'}}>Register</Button>
             </div>
             <Link to={ROUTES.HOME} className={styles.link}>
               <Button style={{backgroundColor: '#53258d', color: '#FFFFFF'}}>Back To Login Page</Button>

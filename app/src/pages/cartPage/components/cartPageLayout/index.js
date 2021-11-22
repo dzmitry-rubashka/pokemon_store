@@ -9,7 +9,6 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import * as React from "react";
 
-
 const CartPageLayout = (
   {
     isLoading,

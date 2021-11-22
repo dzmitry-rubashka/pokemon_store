@@ -10,7 +10,7 @@ import {ADD_POKEMON_REQUEST} from "../../cartPage/actions";
 const PokemonDetailsPageContainer = () => {
   const dispatch = useDispatch();
 
-  const {info} = useSelector(state => state.pokemonDetails)
+  const {info, isLoading} = useSelector(state => state.pokemonDetails)
   const {name} = useParams();
 
   const handleAddPokemon = useCallback(() => {
@@ -35,6 +35,8 @@ const PokemonDetailsPageContainer = () => {
     image={info.image}
     handleAddPokemon={handleAddPokemon}
     abilities={info.abilities}
+    stats={info.stats}
+    isLoading={isLoading}
   />
 };
 
