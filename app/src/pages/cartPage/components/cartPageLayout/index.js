@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import * as React from "react";
+import {Link} from "react-router-dom";
+import {ROUTES} from "../../../../routes/routeNames";
 
 const CartPageLayout = (
   {
@@ -57,16 +59,19 @@ const CartPageLayout = (
         ))}
       </div>
     </div>
-      <div className={styles.order}>
-        <Button style={{backgroundColor: '#354D9BD3', color: '#FFFFFF'}}
-                type='submit'
-                onClick={() => handleAddNewOrder()}
-        >
-          Submit Order
-        </Button>
-      </div>
+      {totalPrice === 0 ? null :
+        <div className={styles.order}>
+          <Button style={{backgroundColor: '#354D9BD3', color: '#FFFFFF'}}
+                  type='submit'
+                  onClick={() => handleAddNewOrder()}
+          >
+            Submit Order
+          </Button>
+        </div>
+      }
     </>
   );
 };
 
 export default CartPageLayout;
+

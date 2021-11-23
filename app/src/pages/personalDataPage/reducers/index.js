@@ -6,7 +6,7 @@ import moment from "moment";
 const defaultState = {
   totalPrice: 0,
   itemsList: [],
-  customerId: 'null', //???????????
+  customerId: 'null',
   isLoading: false,
   error: null,
 }
@@ -39,10 +39,10 @@ const personalDataPageReducer = handleActions(
     }),
 
     [actions.GET_ORDER_SUCCESS]: (state, {payload}) => {
-      const data = payload.response.map(order => ({
-        ...order,
-        createdAt: moment(order.createdAt).format('DD.MM.YYYY'),
-      }))
+      // const data = payload.response.map(order => ({
+      //   ...order,
+      //   createdAt: moment(order.createdAt).format('DD.MM.YYYY'),
+      // }))
       return {
         ...state,
         isLoading: false,

@@ -27,8 +27,7 @@ const PokemonPageLayout = ({handleGoToDetails,
     <div className={styles.cardArea}>
       <h1 className={styles.title}>Store</h1>
       <div className={styles.wrapper}>
-
-        {isLoading ? (<CircularProgress />) : (
+        {isLoading ? (<CircularProgress/>) : (
           list.map((item) => (
               <Card sx={{ width: 250 }} className={styles.cardArea}>
                 <CardContent className={styles.card}>
@@ -54,7 +53,6 @@ const PokemonPageLayout = ({handleGoToDetails,
                 </div>
               </Card>
             ))
-
         )}
       </div>
     </div>

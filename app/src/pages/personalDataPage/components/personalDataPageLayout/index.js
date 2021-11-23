@@ -41,7 +41,7 @@ const PersonalDataPageLayout = ({firstName, lastName, gender, email, phone, isLo
                       <h3 className={styles.totalPrice}>Total Price - {order.totalPrice}</h3>
                       <div className={styles.prevOrder}>
                         {order.itemsList?.map((item) => (
-                          <Card sx={{ width: 200 }} key={item.id} className={styles.card}>
+                          <Card sx={{ width: 200 }} key={item.id} className={styles.card} style={{backgroundColor: "#70917BFF"}}>
                             <CardContent>
                               <div className={styles.name}>
                                 {item.name}
