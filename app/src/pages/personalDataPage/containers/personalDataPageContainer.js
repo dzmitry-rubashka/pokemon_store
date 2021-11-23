@@ -8,7 +8,7 @@ import PersonalDataPageLayout from "../components/personalDataPageLayout";
 const PersonalDataPageContainer = () => {
   const {info} = useSelector((state) => state.auth);
   const {isLoading} = useSelector((state) => state.personalData);
-  const {itemsList, ordersList, totalPrice} = useSelector((state) => state.personalData);
+  const {itemsList, ordersList, totalPrice, createdAt} = useSelector((state) => state.personalData);
 
   const dispatch = useDispatch();
 
@@ -27,6 +27,7 @@ const PersonalDataPageContainer = () => {
     itemsList={itemsList}
     ordersList={ordersList}
     totalPrice={totalPrice}
+    createdAt={createdAt}
   />
 };
 

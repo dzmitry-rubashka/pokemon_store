@@ -118,6 +118,7 @@ const cartPageReducer = handleActions(
       isLoading: false,
       itemsList: [],
       totalPrice: 0,
+      quantity: 0,
     }),
 
   },

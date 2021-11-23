@@ -46,7 +46,7 @@ const CartPageContainer = () => {
       const addNewOrder = {
         itemsList: itemsList,
         totalPrice: totalPrice,
-        customerId: info._id
+        customerId: info._id,
       }
       dispatch(ADD_ORDER_REQUEST(addNewOrder));
       dispatch(CLEAR_CART());

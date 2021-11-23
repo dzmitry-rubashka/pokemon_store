@@ -11,7 +11,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const PersonalDataPageLayout = ({firstName, lastName, gender, email, phone, isLoading, ordersList}) => {
+const PersonalDataPageLayout = ({firstName, lastName, gender, email, phone, isLoading, ordersList, createdAt}) => {
   return (
     <>
       <div className={styles.info}>
@@ -32,7 +32,7 @@ const PersonalDataPageLayout = ({firstName, lastName, gender, email, phone, isLo
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography >Acc</Typography>
+                <Typography className={styles.date}>{order.createdAt.substr(0, 10)}</Typography>
               </AccordionSummary>
               <AccordionDetails >
                 <Typography>

@@ -35,6 +35,13 @@ img {
 .title {
   text-align: center;
   color: #942b74;
+
+}
+
+.titleNew {
+  text-align: center;
+  color: #942b74;
+  font-size: 40px;
 }
 
 .description {
@@ -50,4 +57,20 @@ img {
 
 .circular {
   text-align: center
+}
+
+.added {
+  font-family: 'Joystix', sans-serif;
+  color: #53258d;
+  background-color: #afb26d;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 0 600px 15px;
+}
+
+.pic {
+  width: 32px;
+  text-align: center;
+  margin-right: 20px;
 }

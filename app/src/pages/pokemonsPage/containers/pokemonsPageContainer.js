@@ -15,18 +15,7 @@ const PokemonPageContainer = () => {
   const history = useHistory();
   const {itemsList} = useSelector(state => state.cart)
 
-  const handleAddPokemon = useCallback(() => {
-    const newPokemon = {
-      id: info.id,
-      name: info.name,
-      image: info.image,
-      price: info.price,
-      quantity: 1,
-    }
-
-  }, [dispatch, info, name]);
-
-  const addPokemonToState = (name) => {
+  const handleAddPokemonToState = (name) => {
     if (!itemsList.find(pokemon => pokemon.name === name)) {
       dispatch(GET_POKEMON_DETAILS_REQUEST(name));
       setIsUploadPokemonToState(name);
@@ -74,9 +63,8 @@ const PokemonPageContainer = () => {
     handleGoToDetails={handleGoToDetails}
     handlePageChange={handlePageChange}
     currentPage={currentPage}
-    handleAddPokemon={handleAddPokemon}
     itemsList={itemsList}
-    addPokemonToState={addPokemonToState}
+    handleAddPokemonToState={handleAddPokemonToState}
 
   />;
 };
