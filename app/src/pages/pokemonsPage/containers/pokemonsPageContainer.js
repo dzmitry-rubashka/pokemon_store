@@ -1,6 +1,6 @@
 import PokemonPageLayout from "../components/pokemonsPageLayout";
 import {useDispatch, useSelector} from 'react-redux'
-import {useCallback, useEffect, useState, useLayoutEffect} from "react";
+import {useCallback, useEffect, useState, useLayoutEffect, useMemo} from "react";
 import {useHistory} from "react-router-dom";
 import {useParams} from 'react-router-dom';
 
@@ -13,7 +13,8 @@ const PokemonPageContainer = () => {
   const {info} = useSelector(state => state.pokemonDetails);
   const {name} = useParams();
   const history = useHistory();
-
+  const {cart:{itemsList}} = useSelector(state => state)
+//???
   const handleAddPokemon = useCallback(() => {
     const newPokemon = {
       id: info.id,
@@ -22,12 +23,18 @@ const PokemonPageContainer = () => {
       price: info.price,
       quantity: 1,
     }
-    dispatch(ADD_POKEMON_REQUEST(newPokemon));
+    console.log('try', info)
+
   }, [dispatch, info, name]);
 
   const addPokemonToState = useCallback((name) => {
-    dispatch(GET_POKEMON_DETAILS_REQUEST(name));
-    setIsUploadPokemonToState(name);
+    if (!itemsList.find(pokemon => pokemon.name === info.name)) {
+      dispatch(GET_POKEMON_DETAILS_REQUEST(name));
+      setIsUploadPokemonToState(name);
+    } else {
+      alert('pokemon has been alrdfsdf')
+    }
+
   },[dispatch]);
 
   const [isUploadedNamePokemonToState, setIsUploadPokemonToState] = useState('');
@@ -49,7 +56,6 @@ const PokemonPageContainer = () => {
   useEffect(() => {
     if (isUploadedNamePokemonToState === info.name) {
       const newPokemon = {
-        //is error was here?
         id: info.id,
         name: info.name,
         image: info.image,

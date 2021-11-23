@@ -56,13 +56,15 @@ const PokemonPageLayout = ({handleGoToDetails,
         )}
       </div>
     </div>
-    <div className={styles.pagination}>
+    {isLoading ? null : <div className={styles.pagination}>
       <CustomPagination
         currentPage={currentPage}
         onPageChange={handlePageChange}
         pageCount={20}
       />
-    </div>
+    </div> }
+
+
   </div>;
 };
 
