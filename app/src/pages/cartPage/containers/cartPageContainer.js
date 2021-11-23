@@ -2,7 +2,7 @@ import {useCallback, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 import CartPageLayout from "../components/cartPageLayout";
-import {ADD_POKEMON_REQUEST, CHANGE_QUANTITY_REQUEST, DELETE_POKEMON_REQUEST, GET_CART_REQUEST} from "../actions";
+import {ADD_POKEMON_REQUEST, CHANGE_QUANTITY_REQUEST, DELETE_POKEMON_REQUEST, GET_CART_REQUEST, CLEAR_CART} from "../actions";
 import {ADD_ORDER_REQUEST} from "../../personalDataPage/actions";
 
 const CartPageContainer = () => {
@@ -42,8 +42,6 @@ const CartPageContainer = () => {
     dispatch(GET_CART_REQUEST());
   }, [dispatch]);
 
-
-
   const handleAddNewOrder = useCallback(() => {
       const addNewOrder = {
         itemsList: itemsList,
@@ -51,11 +49,10 @@ const CartPageContainer = () => {
         customerId: info._id
       }
       dispatch(ADD_ORDER_REQUEST(addNewOrder));
+      dispatch(CLEAR_CART());
     },
     [dispatch, itemsList, totalPrice, info]
   );
-
-
 
   useEffect(() => {
     dispatch(GET_CART_REQUEST())

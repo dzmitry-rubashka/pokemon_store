@@ -18,10 +18,8 @@ const PokemonPageLayout = ({handleGoToDetails,
                              isLoading,
                              currentPage,
                              handlePageChange,
-                             name,
-                             image,
-                             handleAddPokemon,
-                             addPokemonToState }
+                             addPokemonToState,
+                             itemsList}
 ) => {
   return <div>
     <div className={styles.cardArea}>

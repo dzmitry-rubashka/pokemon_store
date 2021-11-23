@@ -14,6 +14,7 @@ const PokemonDetailsPageContainer = () => {
   const {name} = useParams();
 
   const handleAddPokemon = useCallback(() => {
+
     const newPokemon = {
       id: info.id,
       name: info.name,

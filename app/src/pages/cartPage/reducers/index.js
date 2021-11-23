@@ -1,6 +1,7 @@
 import {handleActions} from 'redux-actions';
 
 import * as actions from '../actions';
+import {CLEAR_CART} from "../actions";
 
 const defaultState = {
   totalPrice: 0,
@@ -111,6 +112,14 @@ const cartPageReducer = handleActions(
       isLoading: false,
       error: payload.response.response,
     }),
+
+    [actions.CLEAR_CART]: (state) => ({
+      ...state,
+      isLoading: false,
+      itemsList: [],
+      totalPrice: 0,
+    }),
+
   },
   defaultState
 )

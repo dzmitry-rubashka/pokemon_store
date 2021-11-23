@@ -15,3 +15,5 @@ export const CHANGE_QUANTITY_FAIL = createAction('ADD_CART_FAIL');
 export const DELETE_POKEMON_REQUEST = createAction('DELETE_POKEMON_REQUEST');
 export const DELETE_POKEMON_SUCCESS = createAction('DELETE_POKEMON_SUCCESS');
 export const DELETE_POKEMON_FAIL = createAction('DELETE_POKEMON_FAIL');
+
+export const CLEAR_CART = createAction('CLEAR_CART');
