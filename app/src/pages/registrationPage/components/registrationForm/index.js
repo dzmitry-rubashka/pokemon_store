@@ -79,7 +79,7 @@ const RegistrationForm = ({formValue, onChange, onSubmit, isRegistered, error, i
           </div>
 
           <div className={styles.text}>
-            <span className={styles.input}>Gender</span>
+            <span className={styles.input}>Gender (*sorry, at the moment you can choose only male/female (lowercase))git</span>
             <Box
               component="form"
               sx={{
