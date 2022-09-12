@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cardArea {
+  display: flex;
+  margin: 10px;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  max-width: 95vw;
+  justify-content: center;
+}
+
+.card {
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 22px;
+  text-align: center;
+  color: #943e34;
+  font-family: "Joystix", sans-serif;
+}
+
+.price {
+  margin-top: 5px;
+  font-size: 15px;
+  text-align: center;
+  color: #503d4f;
+  font-family: "Joystix", sans-serif;
+}
+
+.totalPrice {
+  text-align: right;
+  margin: 10px 40px 0 0;
+  font-family: "Joystix", sans-serif;
+  font-size: 25px;
+  color: #942b74;
+}
+
+.order {
+  text-align: center;
+  margin-bottom: 15px;
+}
