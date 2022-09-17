@@ -2,89 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be5ec005-f517-4ce6-ad47-e1a68b540295" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pokemon_store.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/customPagination/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/customPagination/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/header/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/header/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/layout/mainLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/layout/mainLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/layout/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/layout/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/list/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/navBar/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/navBar/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/navBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/navBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/commonComponents/navBar/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/commonComponents/navBar/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/constants/actionPostfixes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/actionPostfixes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/constants/localStorageKeys.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/localStorageKeys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/helpers/request/watchRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/request/watchRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/helpers/utils/actionPostfixCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/utils/actionPostfixCreator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/hooks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/hooks/useForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/hooks/useLogout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useLogout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/http/apiCallsMapping.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/apiCallsMapping.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/http/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/cartPage/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/cartPage/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/cartPage/components/cartPageLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/components/cartPageLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/cartPage/components/cartPageLayout/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/components/cartPageLayout/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/cartPage/containers/cartPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/containers/cartPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/cartPage/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/home/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/home/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/home/components/loginForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/loginForm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/home/components/loginForm/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/loginForm/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/home/containers/loginPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/containers/loginPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/home/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/personalDataPage/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/personalDataPage/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/personalDataPage/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/personalDataPage/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/personalDataPage/components/personalDataPageLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/personalDataPage/components/personalDataPageLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/personalDataPage/components/personalDataPageLayout/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/personalDataPage/components/personalDataPageLayout/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/personalDataPage/containers/personalDataPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/personalDataPage/containers/personalDataPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/personalDataPage/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/personalDataPage/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonDetailsPage/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonDetailsPage/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonDetailsPage/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonDetailsPage/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonDetailsPage/components/pokemonDetailsPageLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonDetailsPage/components/pokemonDetailsPageLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonDetailsPage/components/pokemonDetailsPageLayout/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonDetailsPage/components/pokemonDetailsPageLayout/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonDetailsPage/containers/pokemonDetailsPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonDetailsPage/containers/pokemonDetailsPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonDetailsPage/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonDetailsPage/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonsPage/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonsPage/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonsPage/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonsPage/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonsPage/components/pokemonsPageLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonsPage/components/pokemonsPageLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonsPage/components/pokemonsPageLayout/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonsPage/components/pokemonsPageLayout/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonsPage/containers/pokemonsPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonsPage/containers/pokemonsPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonsPage/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonsPage/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/pokemonsPage/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pokemonsPage/sagas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/registrationPage/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registrationPage/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/registrationPage/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registrationPage/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/registrationPage/components/registrationForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registrationPage/components/registrationForm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/registrationPage/components/registrationForm/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registrationPage/components/registrationForm/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/registrationPage/containers/registrationPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registrationPage/containers/registrationPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/registrationPage/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registrationPage/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/routes/privateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/privateRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/routes/routeNames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routeNames.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/static/images/attack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/images/attack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/static/images/defense.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/images/defense.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/static/images/life.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/images/life.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/static/images/login-page.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/images/login-page.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/static/images/special-attack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/images/special-attack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/static/images/special-defense.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/images/special-defense.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/static/images/speed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/images/speed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/store/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/store/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/store/rootSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/rootSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,17 +21,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IT/pokemon_store&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\IT\\pokemon_store\\node_modules\\prettier&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/IT/pokemon_store",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\IT\\pokemon_store\\node_modules\\prettier",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IT\pokemon_store" />
@@ -127,7 +48,8 @@
       <option name="presentableId" value="Default" />
       <updated>1662923228362</updated>
       <workItem from="1662923229829" duration="2955000" />
-      <workItem from="1662966547998" duration="3514000" />
+      <workItem from="1662966547998" duration="4780000" />
+      <workItem from="1663407203831" duration="1267000" />
     </task>
     <servers />
   </component>
